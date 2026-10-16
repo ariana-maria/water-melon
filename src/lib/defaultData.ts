@@ -1,0 +1,118 @@
+import type { AppData } from './types'
+
+export const defaultData: AppData = {
+  lastUpdated: new Date().toISOString(),
+  career: {
+    currentComp: 117000,
+    targetComp: 180000,
+    currentRole: 'Product Manager',
+    currentCompany: "O'Reilly Media",
+    targetRole: 'Senior PM / Growth PM (AI & Search)',
+    skills: [
+      { id: 's1', name: 'AI Product Strategy', category: 'ai', proficiency: 45, target: 85, nextStep: 'Complete AI for PMs course on Coursera' },
+      { id: 's2', name: 'Search & Discovery', category: 'search', proficiency: 50, target: 80, nextStep: 'Document O\'Reilly search use cases + competitive analysis' },
+      { id: 's3', name: 'Localization & L10n', category: 'localization', proficiency: 60, target: 90, nextStep: 'Lead next internationalization sprint' },
+      { id: 's4', name: 'Data Literacy & SQL', category: 'data', proficiency: 40, target: 80, nextStep: 'Mode Analytics SQL course — 2 modules/week' },
+      { id: 's5', name: 'Growth PM Frameworks', category: 'growth', proficiency: 35, target: 75, nextStep: 'Read Hacking Growth by Sean Ellis' },
+      { id: 's6', name: 'Stakeholder Leadership', category: 'leadership', proficiency: 70, target: 85, nextStep: 'Ask for lead on Q4 roadmap presentation' },
+    ],
+    milestones: [
+      { id: 'm1', title: 'Complete SQL foundations', description: 'Mode Analytics SQL course + 3 self-directed queries at work', targetDate: '2026-11-15', completed: false, category: 'learning' },
+      { id: 'm2', title: 'Publish 5 LinkedIn posts on AI/Search', description: 'Build public voice in the AI PM space', targetDate: '2026-11-01', completed: false, category: 'network' },
+      { id: 'm3', title: 'Request internal Growth PM role discussion', description: 'Meet with hiring manager at O\'Reilly to explore Growth track', targetDate: '2026-11-30', completed: false, category: 'comp' },
+      { id: 'm4', title: 'Launch Substack', description: 'First issue on AI + Localization intersection', targetDate: '2026-10-31', completed: false, category: 'network' },
+      { id: 'm5', title: 'Complete AI for PMs certification', description: 'Coursera / Reforge AI PM track', targetDate: '2026-12-15', completed: false, category: 'learning' },
+      { id: 'm6', title: 'Apply to 3 external PM roles at $160k+', description: 'Diversify pipeline beyond O\'Reilly', targetDate: '2026-12-01', completed: false, category: 'career' },
+    ],
+    applications: [
+      { id: 'a1', company: "O'Reilly Media", role: 'Growth PM (Internal)', status: 'researching', compMin: 140000, compMax: 165000, notes: 'Need to initiate conversation with hiring manager. Build case with data from current role.', isInternal: true },
+    ],
+    learningLog: [
+      { id: 'l1', date: '2026-10-14', resource: 'Reforge - AI Product Management', type: 'course', topic: 'AI', notes: 'Module 2 done. Key takeaway: PMs need to own model evaluation, not just spec.' },
+      { id: 'l2', date: '2026-10-10', resource: 'Lenny\'s Podcast: Search at Spotify', type: 'podcast', topic: 'search', notes: 'Ranking signals and personalization — bookmark for O\'Reilly search context.' },
+    ],
+  },
+  wellness: {
+    foodChallengeActive: false,
+    familyProfile: {
+      allergies: ['peanuts (son)'],
+      preferences: ['seasonal', 'whole foods', 'pescatarian-friendly'],
+      householdSize: 2,
+    },
+    cycleData: {
+      lastPeriodStart: '2026-10-02',
+      avgCycleLength: 28,
+    },
+    habitLog: [
+      { date: '2026-10-15', meditation: true, meditationMinutes: 10, sleep: true, sleepHours: 7.5, beauty: true },
+      { date: '2026-10-14', meditation: true, meditationMinutes: 15, sleep: true, sleepHours: 8, beauty: false },
+      { date: '2026-10-13', meditation: false, sleep: true, sleepHours: 6.5, beauty: true },
+      { date: '2026-10-12', meditation: true, meditationMinutes: 10, sleep: true, sleepHours: 7, beauty: true },
+      { date: '2026-10-11', meditation: true, meditationMinutes: 20, sleep: false, sleepHours: 5.5, beauty: true },
+      { date: '2026-10-10', meditation: true, meditationMinutes: 10, sleep: true, sleepHours: 8, beauty: true },
+      { date: '2026-10-09', meditation: true, meditationMinutes: 12, sleep: true, sleepHours: 7.5, beauty: false },
+    ],
+    foodJournal: [],
+    mealPlan: [
+      { id: 'mp1', date: '2026-10-16', meal: 'breakfast', name: 'Oat porridge with pumpkin seeds & apple', cycleAligned: true },
+      { id: 'mp2', date: '2026-10-16', meal: 'lunch', name: 'Roasted squash & lentil soup', cycleAligned: true },
+      { id: 'mp3', date: '2026-10-16', meal: 'dinner', name: 'Baked salmon with root veg & greens', cycleAligned: true },
+      { id: 'mp4', date: '2026-10-17', meal: 'breakfast', name: 'Greek yogurt bowl with berries & flax seeds', cycleAligned: true },
+      { id: 'mp5', date: '2026-10-17', meal: 'lunch', name: 'Quinoa salad with roasted sweet potato', cycleAligned: true },
+      { id: 'mp6', date: '2026-10-17', meal: 'dinner', name: 'Chicken thighs with seasonal greens', cycleAligned: true },
+    ],
+  },
+  content: {
+    pillars: [
+      { id: 'p1', name: 'AI & Search PM', description: 'Insights on building AI-powered products', color: '#2D6A4F', targetPerMonth: 4 },
+      { id: 'p2', name: 'Localization & Global', description: 'Global product strategy & cultural nuance', color: '#D4A853', targetPerMonth: 2 },
+      { id: 'p3', name: 'Women in Tech', description: 'Career journey, visibility, negotiation', color: '#E85D4A', targetPerMonth: 2 },
+      { id: 'p4', name: 'Wellness & Balance', description: 'Personal routines, cycle living, mindful work', color: '#F4A5AC', targetPerMonth: 2 },
+      { id: 'p5', name: 'Career Transitions', description: 'Moving up, salary growth, pivoting in tech', color: '#7DAA83', targetPerMonth: 2 },
+    ],
+    posts: [
+      {
+        id: 'post1',
+        title: "What 2 years localization PM taught me about search relevance",
+        status: 'idea',
+        platform: 'linkedin',
+        pillarId: 'p1',
+        tags: ['localization', 'search', 'productmanagement'],
+        scheduledDate: '2026-10-20',
+      },
+      {
+        id: 'post2',
+        title: "The PM who negotiated $63k more — here's the plan",
+        body: "I'm documenting my journey from $117k → $180k. Not hypothetical. Not a hack. A real strategy...",
+        status: 'drafting',
+        platform: 'substack',
+        pillarId: 'p5',
+        tags: ['salary', 'career', 'womenintech'],
+        scheduledDate: '2026-10-31',
+      },
+      {
+        id: 'post3',
+        title: "Cycle syncing + my work calendar changed my productivity",
+        status: 'idea',
+        platform: 'linkedin',
+        pillarId: 'p4',
+        tags: ['cyclework', 'wellness', 'productivity'],
+        scheduledDate: '2026-10-28',
+      },
+      {
+        id: 'post4',
+        title: "Why AI localization is the next big PM opportunity",
+        status: 'published',
+        platform: 'linkedin',
+        pillarId: 'p2',
+        tags: ['ai', 'localization', 'productmanagement'],
+        publishedDate: '2026-10-08',
+        engagement: { likes: 147, comments: 23, shares: 12, views: 3400 },
+      },
+    ],
+    platformStats: {
+      linkedin: { followers: 2340, targetFollowers: 5000, postsThisMonth: 1, targetPerMonth: 4, url: 'linkedin.com/in/ariana-brandao' },
+      substack: { followers: 0, targetFollowers: 500, postsThisMonth: 0, targetPerMonth: 2 },
+    },
+  },
+}
